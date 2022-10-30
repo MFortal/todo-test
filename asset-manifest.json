@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/todo-test/static/css/main.a9c34eed.css",
+    "main.js": "/todo-test/static/js/main.19557126.js",
+    "static/media/cabana.svg": "/todo-test/static/media/cabana.54fce17f1d358d50ef09.svg",
+    "static/media/RobotoCondensed-Regular.ttf": "/todo-test/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
+    "static/media/cabana.eot": "/todo-test/static/media/cabana.097eb3597f833bbe5fff.eot",
+    "static/media/cabana.ttf": "/todo-test/static/media/cabana.f09215c40ad390d24fa9.ttf",
+    "static/media/cabana.woff": "/todo-test/static/media/cabana.c5d7b590b79ab3fde320.woff",
+    "static/media/cabana.woff2": "/todo-test/static/media/cabana.54959bfdba2bba5b840a.woff2",
+    "static/media/arrow.svg": "/todo-test/static/media/arrow.7e9db6b2bc7bb518e7dc.svg",
+    "index.html": "/todo-test/index.html",
+    "static/media/checkMark.svg": "/todo-test/static/media/checkMark.a62b6dfa65d2f353330e.svg",
+    "main.a9c34eed.css.map": "/todo-test/static/css/main.a9c34eed.css.map",
+    "main.19557126.js.map": "/todo-test/static/js/main.19557126.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9c34eed.css",
+    "static/js/main.19557126.js"
+  ]
+}
