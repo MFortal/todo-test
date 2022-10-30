@@ -17,14 +17,17 @@ export const Footer: React.FC<FooterProps> = ({
   current_filter,
 }) => (
   <div className={styles.footer}>
-    <span className={styles.footer_span}>{count} items left</span>
+    <span className={styles.footer_span} data-testid="countActive">
+      {count} items left
+    </span>
     <div className={styles.footer_filter}>
       <span
         className={cn(
           styles.footer_span,
           current_filter === FILTER.ALL ? styles.footer_currentFilter : ""
         )}
-        onClick={() => filterTodo(FILTER.ALL)}>
+        onClick={() => filterTodo(FILTER.ALL)}
+        data-testid="all">
         All
       </span>
       <span
@@ -32,7 +35,8 @@ export const Footer: React.FC<FooterProps> = ({
           styles.footer_span,
           current_filter === FILTER.ACTIVE ? styles.footer_currentFilter : ""
         )}
-        onClick={() => filterTodo(FILTER.ACTIVE)}>
+        onClick={() => filterTodo(FILTER.ACTIVE)}
+        data-testid="active">
         Active
       </span>
       <span
@@ -40,11 +44,15 @@ export const Footer: React.FC<FooterProps> = ({
           styles.footer_span,
           current_filter === FILTER.COMPLETED ? styles.footer_currentFilter : ""
         )}
-        onClick={() => filterTodo(FILTER.COMPLETED)}>
+        onClick={() => filterTodo(FILTER.COMPLETED)}
+        data-testid="completed">
         Completed
       </span>
     </div>
-    <span className={styles.footer_span} onClick={() => deleteCompltedTodos()}>
+    <span
+      className={styles.footer_span}
+      onClick={() => deleteCompltedTodos()}
+      data-testid="clear">
       Clear Completed
     </span>
   </div>

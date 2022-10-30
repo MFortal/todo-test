@@ -72,7 +72,7 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
 
   return (
     <>
-      <section className={styles.todo}>
+      <section className={styles.todo} data-testid="todo">
         <div className={styles.todo_row}>
           <TodoPanelAdd addTodo={addTodo} />
         </div>
@@ -86,7 +86,8 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
                   styles.todo_item,
                   todo.completed ? styles.todo_item_completed : ""
                 )}
-                onClick={() => checkTodo(todo.id)}>
+                onClick={() => checkTodo(todo.id)}
+                data-testid="task">
                 <div
                   className={cn(
                     styles.item_mark,

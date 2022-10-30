@@ -26,6 +26,7 @@ export const TodoPanelAdd: React.FC<AddTodoPanelProps> = (props) => {
   return (
     <label className={styles.label}>
       <input
+        type="text"
         className={styles.input}
         autoComplete="off"
         id="name"
@@ -34,6 +35,7 @@ export const TodoPanelAdd: React.FC<AddTodoPanelProps> = (props) => {
         name="name"
         onKeyDown={(e) => onKeyDown(e)}
         placeholder="What needs to be done?"
+        data-testid="input"
       />
     </label>
   );

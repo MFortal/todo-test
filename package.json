@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --bail --watchAll=false --coverage --coverageReporters='text-summary'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
