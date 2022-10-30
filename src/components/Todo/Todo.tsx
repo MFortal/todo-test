@@ -15,6 +15,7 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
   const [filter, setFilter] = useState(FILTER.ALL);
   const [visibleTasks, setVisibleTasks] = useState(todos);
 
+  // Удаленение выполенных задач
   const deleteCompltedTodos = () => {
     setTodos(todos.filter((todo) => todo.completed !== true));
     if (filter === FILTER.COMPLETED) {
@@ -22,6 +23,7 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
     } else setVisibleTasks(todos.filter((todo) => todo.completed !== true));
   };
 
+  // Добавление новой задачи
   const addTodo = ({ name }: Omit<Todo, "id" | "completed">) => {
     const newTask = { id: uuid(), name, completed: false };
     setTodos([...todos, newTask]);
@@ -30,6 +32,7 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
     }
   };
 
+  // Изменение выполненности задачи
   const checkTodo = (id: Todo["id"]) => {
     setTodos(
       todos.map((todo) => {
@@ -49,6 +52,7 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
     );
   };
 
+  // Фильтрация задач по нажатию на фильтр
   const filterTodo = (filter: string): void => {
     setFilter(filter);
     switch (filter) {
