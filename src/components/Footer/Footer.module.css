@@ -1,0 +1,27 @@
+.footer {
+  padding: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_span {
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(139, 139, 139);
+}
+
+.footer_span:hover {
+  color: rgb(105, 105, 105);
+}
+
+.footer_filter {
+  display: flex;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.footer_currentFilter {
+  border: 2px solid rgb(200, 188, 188);
+  border-radius: 10px;
+}

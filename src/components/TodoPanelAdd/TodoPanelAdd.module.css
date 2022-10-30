@@ -1,0 +1,57 @@
+.input {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  padding-left: 65px;
+  border: none;
+  color: rgb(169, 169, 169);
+}
+
+.input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.label {
+  position: relative;
+}
+
+.label:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 0px;
+  left: 10px;
+  width: 45px;
+  transform: scale(0.6);
+  background: url("./../../assets/arrow.svg") no-repeat;
+}
+
+.input::placeholder {
+  color: rgb(169, 169, 169);
+}
+
+.input::-webkit-input-placeholder {
+  color: rgb(169, 169, 169);
+}
+
+.input::-ms-input-placeholder {
+  color: rgb(169, 169, 169);
+}
+
+.input:-moz-placeholder {
+  color: rgb(169, 169, 169);
+  opacity: 1;
+}
+
+.input::-moz-placeholder {
+  color: rgb(169, 169, 169);
+  opacity: 1;
+}
+
+.input:-ms-input-placeholder {
+  color: rgb(169, 169, 169);
+}

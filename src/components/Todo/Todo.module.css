@@ -1,0 +1,58 @@
+.todo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.todo_base {
+  width: 98%;
+  height: 10px;
+}
+.todo_base:last-child {
+  width: 96%;
+  height: 10px;
+}
+
+.todo_item {
+  padding-left: 21px;
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+  align-items: center;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  cursor: pointer;
+}
+
+.todo_item:first-child {
+  border-top: 1px solid rgb(224, 224, 224);
+}
+
+.todo_row {
+  height: 75px;
+}
+
+.todo_item_completed {
+  color: rgba(139, 139, 139, 0.5);
+  text-decoration: line-through;
+}
+
+.item_mark {
+  border: 1px solid rgb(224, 224, 224);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.item_mark_completed {
+  border: 1px solid rgba(139, 139, 139, 0.5);
+  background: no-repeat center center url("../../assets/checkMark.svg");
+}
+
+.todo_empty {
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  color: rgb(105, 105, 105);
+}

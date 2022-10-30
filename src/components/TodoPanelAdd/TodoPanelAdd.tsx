@@ -1,40 +1,40 @@
-import React from 'react';
-import styles from './TodoPanelAdd.module.css';
+import React from "react";
+import styles from "./TodoPanelAdd.module.css";
 
-const DEFAULT_TODO = { id:'', name: '' };
+const DEFAULT_TODO = { id: "", name: "" };
 
 interface AddTodoPanelProps {
-  addTodo: ({ name }: Omit<Todo, 'id' | 'completed'>) => void;
+  addTodo: ({ name }: Omit<Todo, "id" | "completed">) => void;
 }
 
 export const TodoPanelAdd: React.FC<AddTodoPanelProps> = (props) => {
-const [todo, setTodo] = React.useState(DEFAULT_TODO);
+  const [newTask, setNewTask] = React.useState(DEFAULT_TODO);
 
-  const onClick = () => {
-    props.addTodo(todo);
-    setTodo(DEFAULT_TODO);
-  };
-
-    const something=(event: React.KeyboardEvent<HTMLDivElement>)=> {
-        if (event.keyCode === 13) {
-            onClick();
-        }
+  const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    // Если нажат Enter и что-то введено, то добавить задачку в лист
+    if (event.currentTarget.value.length > 0 && event.key === "Enter") {
+      props.addTodo(newTask);
+      setNewTask(DEFAULT_TODO);
     }
+  };
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
-    setTodo({ ...todo, [name]: value });
+    setNewTask({ ...newTask, [name]: value });
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <label htmlFor='name'>
-            <input autoComplete='off' id='name' value={todo.name} onChange={onChange} name='name' onKeyDown={(e) => something(e) }/>
-          </label>
-        </div>
-      </div>
-    </div>
+    <label className={styles.label}>
+      <input
+        className={styles.input}
+        autoComplete="off"
+        id="name"
+        value={newTask.name}
+        onChange={(e) => onChange(e)}
+        name="name"
+        onKeyDown={(e) => onKeyDown(e)}
+        placeholder="What needs to be done?"
+      />
+    </label>
   );
 };

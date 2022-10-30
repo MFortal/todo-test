@@ -1,0 +1,15 @@
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 180px;
+  font-family: "Cabana";
+  letter-spacing: 0.125em;
+}
