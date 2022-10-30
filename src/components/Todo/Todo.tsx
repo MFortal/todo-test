@@ -17,7 +17,9 @@ export const Todo: React.FC<TodoProps> = ({ todoList }) => {
 
   const deleteCompltedTodos = () => {
     setTodos(todos.filter((todo) => todo.completed !== true));
-    //setVisibleTasks(todos.filter((todo) => todo.completed !== true));
+    if (filter === FILTER.COMPLETED) {
+      setVisibleTasks([]);
+    } else setVisibleTasks(todos.filter((todo) => todo.completed !== true));
   };
 
   const addTodo = ({ name }: Omit<Todo, "id" | "completed">) => {
