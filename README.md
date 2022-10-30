@@ -6,11 +6,14 @@ TodoList с возможностью создания новой задачи и
 
 ## Стек
 
-##### Typescript
+#### Typescript
 
-##### React
+#### React
 
-##### React Hooks
+#### React Hooks
+
+## Посмотреть можно здесь
+https://mfortal.github.io/todo-test/
 
 ### Баги
 
